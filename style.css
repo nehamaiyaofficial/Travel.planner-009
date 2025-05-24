@@ -1,4 +1,4 @@
-/* Enhanced CSS with glassmorphism and modern aesthetics */
+/* Reset and Base */
 * {
     margin: 0;
     padding: 0;
@@ -8,167 +8,186 @@
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: white;
+    color: #2d2d2d;
+    background: #f4f7f9;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
-/* Enhanced Header with glassmorphism */
+/* Glassy Header */
 header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #333;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #2d2d2d;
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
 }
 
-/* Rest of the enhanced CSS... */
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
 nav a {
-    color: white;
+    color: #2d2d2d;
     text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: 3px;
+    margin: 0 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #007bff;
 }
 
-/* Main content */
+/* Main Layout */
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
     color: white;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Search box */
+/* Search Box */
 .search-box {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    gap: 12px;
+    max-width: 600px;
+    margin: 30px auto 0;
 }
 
 .search-box input {
     flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
     font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #2196f3;
 }
 
 .search-box button {
-    padding: 12px 24px;
-    background-color: #ff6b6b;
+    padding: 14px 24px;
+    background: #ff6b6b;
     color: white;
     border: none;
-    border-radius: 25px;
-    cursor: pointer;
+    border-radius: 30px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .search-box button:hover {
-    background-color: #ff5252;
+    background: #ff4c4c;
 }
 
-/* Popular places */
+/* Popular Places Section */
 .popular-places h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.25rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #222;
 }
 
 .places-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
 .place-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .place-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
 .place-card img {
     width: 100%;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
 }
 
 .place-card h4 {
-    padding: 15px;
-    font-size: 1.3rem;
+    padding: 16px;
+    font-size: 1.4rem;
     color: #333;
 }
 
 .place-card p {
-    padding: 0 15px;
+    padding: 0 16px 16px;
     color: #666;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .book-btn {
     width: 100%;
-    padding: 15px;
-    background-color: #4CAF50;
+    padding: 14px;
+    background-color: #4caf50;
     color: white;
     border: none;
-    cursor: pointer;
     font-size: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .book-btn:hover {
-    background-color: #45a049;
+    background-color: #43a047;
 }
 
 /* Forms */
-.search-form, .login-form {
-    background: white;
+.search-form,
+.login-form {
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     max-width: 500px;
     margin: 0 auto;
 }
@@ -179,61 +198,65 @@ main {
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border 0.3s;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #2196F3;
+    border-color: #2196f3;
     outline: none;
 }
 
 .search-form button,
 .login-form button {
     width: 100%;
-    padding: 12px;
-    background-color: #2196F3;
+    padding: 14px;
+    background-color: #2196f3;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .search-form button:hover,
 .login-form button:hover {
-    background-color: #1976D2;
+    background-color: #1976d2;
 }
 
-/* Login container */
+/* Login Container */
 .login-container {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 420px;
+    margin: 60px auto;
 }
 
 .login-container h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: #222;
 }
 
 .login-container p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
+    font-size: 14px;
 }
 
 .login-container a {
-    color: #2196F3;
+    color: #2196f3;
     text-decoration: none;
 }
 
@@ -243,23 +266,31 @@ main {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color:#e2725b;
+    background-color: #111;
+    color: #e2725b;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 24px;
+    font-size: 15px;
+    margin-top: 60px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
-/* Search results */
+/* Search Results */
 #search-results {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .result-item {
     background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.result-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
