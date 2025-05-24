@@ -14,17 +14,17 @@ function doSearch() {
     const results = [
         {
             name: where + ' Adventure Tour',
-            price: '$' + (Math.floor(Math.random() * 1000) + 200),
+            price: '₹' + (Math.floor(Math.random() * 50000) + 25000),
             description: 'Amazing trip to ' + where + ' with great activities!'
         },
         {
             name: where + ' Cultural Experience',
-            price: '$' + (Math.floor(Math.random() * 800) + 300),
+            price: '₹' + (Math.floor(Math.random() * 60000) + 30000),
             description: 'Explore the culture and history of ' + where
         },
         {
             name: where + ' Relaxation Package', 
-            price: '$' + (Math.floor(Math.random() * 1200) + 400),
+            price: '₹' + (Math.floor(Math.random() * 75000) + 35000),
             description: 'Relax and unwind in beautiful ' + where
         }
     ];
