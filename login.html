@@ -12,29 +12,29 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="search.html">Search</a>
-            <a href="login.html">Login</a>
+            <a href="login.html" class="active">Login</a>
         </nav>
     </header>
 
     <main>
         <div class="login-container">
-            <h2>Login to Your Account</h2>
+            <h2>🔐 Login to Your Account</h2>
             
             <form class="login-form">
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
+                    <label for="email">📧 Email:</label>
+                    <input type="email" id="email" required placeholder="your.email@example.com">
                 </div>
                 
                 <div class="form-group">
-      <label for="password">Password:</label>
-                    <input type="password" id="password" required>
+                    <label for="password">🔑 Password:</label>
+                    <input type="password" id="password" required placeholder="Your secure password">
                 </div>
                 
-                <button type="button" onclick="loginUser()">Login</button>
+                <button type="button" onclick="loginUser()">🚀 Login</button>
             </form>
             
-            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">✨ Sign up here</a></p>
         </div>
     </main>
 
@@ -44,14 +44,14 @@
             const password = document.getElementById('password').value;
             
             if (email && password) {
-                alert('Login successful! (This is just a demo)');
+                alert('🎉 Login successful! Welcome to Travel Planner!');
             } else {
-                alert('Please fill in all fields');
+                alert('⚠️ Please fill in all fields');
             }
         }
         
         function showSignup() {
-            alert('Signup feature coming soon!');
+            alert('📝 Signup feature coming soon! Stay tuned for amazing travel deals!');
         }
     </script>
 </body>
