@@ -5,186 +5,161 @@
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #2c3e50;
-    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-    min-height: 100vh;
-    padding-bottom: 50px;
+    color: #333;
 }
 
-/* Glassmorphic Header */
+/* Header */
 header {
-    background: rgba(30, 144, 255, 0.3); /* DodgerBlue with transparency */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    padding: 1.5rem 2rem;
+    background-color: #2196F3;
+    color: white;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 header h1 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px #00000050;
+    font-size: 1.5rem;
 }
 
-/* Navigation Buttons - Home, Search, Login */
 nav a {
-    background: linear-gradient(to right, #ff6a00, #ee0979); /* orange-pink */
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 nav a:hover {
-    background: linear-gradient(to right, #ee0979, #ff6a00); /* reverse on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-/* Hero Section - Unique Pink to Orange Gradient */
+/* Hero section */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #f857a6, #ff5858);
-    color: #fff;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 90%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #fdfdfd;
 }
 
-
-/* Search Box */
+/* Search box */
 .search-box {
     display: flex;
     justify-content: center;
     gap: 10px;
-    max-width: 600px;
-    margin: 30px auto;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .search-box input {
     flex: 1;
-    padding: 14px 18px;
+    padding: 12px;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     font-size: 16px;
-    background-color: #ffffffcc;
-    box-shadow: inset 2px 2px 6px #ffffff88;
 }
 
 .search-box button {
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 12px 24px;
+    background-color: #ff6b6b;
     color: white;
     border: none;
-    border-radius: 30px;
-    font-size: 16px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 16px;
 }
 
 .search-box button:hover {
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background-color: #ff5252;
 }
 
-/* Popular Places */
+/* Popular places */
 .popular-places h3 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     color: #333;
 }
 
 .places-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .place-card {
-    background: #ffffffdd;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .place-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .place-card img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
 }
 
 .place-card h4 {
     padding: 15px;
-    font-size: 1.4rem;
-    color: #222;
+    font-size: 1.3rem;
+    color: #333;
 }
 
 .place-card p {
     padding: 0 15px;
     color: #666;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .book-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 0 0 15px 15px;
-    transition: 0.3s;
 }
 
 .book-btn:hover {
-    background: linear-gradient(135deg, #92fe9d, #00c9ff);
+    background-color: #45a049;
 }
 
 /* Forms */
 .search-form, .login-form {
-    background: #ffffffdd;
+    background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 .form-group {
@@ -194,53 +169,51 @@ nav a:hover {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 600;
-    color: #333;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #ddd;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 16px;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #00bcd4;
+    border-color: #2196F3;
     outline: none;
 }
 
 .search-form button,
 .login-form button {
     width: 100%;
-    padding: 14px;
-    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    padding: 12px;
+    background-color: #2196F3;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .search-form button:hover,
 .login-form button:hover {
-    background: linear-gradient(to right, #5b86e5, #36d1dc);
+    background-color: #1976D2;
 }
 
-/* Login Container */
+/* Login container */
 .login-container {
-    max-width: 420px;
+    max-width: 400px;
     margin: 50px auto;
 }
 
 .login-container h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #2c3e50;
+    color: #333;
 }
 
 .login-container p {
@@ -249,9 +222,8 @@ nav a:hover {
 }
 
 .login-container a {
-    color: #5b86e5;
+    color: #2196F3;
     text-decoration: none;
-    font-weight: 600;
 }
 
 .login-container a:hover {
@@ -261,12 +233,10 @@ nav a:hover {
 /* Footer */
 footer {
     background-color: #333;
-    color: #f8c291;
+    color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 60px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    margin-top: 50px;
 }
 
 /* Search results */
@@ -275,10 +245,9 @@ footer {
 }
 
 .result-item {
-    background: #ffffffee;
+    background: white;
     padding: 20px;
     margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
