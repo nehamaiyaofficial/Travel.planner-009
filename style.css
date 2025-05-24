@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,34 +7,37 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #121212;
+  color: #e0e0e0;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Header */
 header {
-  background-color: #1a1a1a;
+  background-color: #1f1f1f;
   color: #ffffff;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
   font-size: 1.8rem;
-  font-weight: 600;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 12px;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 nav a:hover {
@@ -43,12 +46,12 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: #ffffff;
   text-align: center;
   padding: 60px 20px;
-  border-radius: 8px;
-  margin: 20px auto;
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 40px auto;
   max-width: 1200px;
 }
 
@@ -67,32 +70,33 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 10px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  margin-bottom: 40px;
 }
 
 .search-box input {
   flex: 1;
-  padding: 12px 15px;
+  padding: 12px;
   border: none;
   border-radius: 25px;
   font-size: 16px;
+  background-color: #2c2c2c;
+  color: #ffffff;
 }
 
 .search-box button {
   padding: 12px 24px;
-  background-color: #e74c3c;
+  background-color: #ff6b6b;
   color: #ffffff;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .search-box button:hover {
-  background-color: #c0392b;
+  background-color: #ff5252;
 }
 
 /* Popular Places */
@@ -100,21 +104,19 @@ nav a:hover {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .places-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .place-card {
-  background: #ffffff;
+  background: #1e1e1e;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -132,39 +134,38 @@ nav a:hover {
 .place-card h4 {
   padding: 15px;
   font-size: 1.3rem;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .place-card p {
   padding: 0 15px 15px;
-  color: #7f8c8d;
-  font-size: 1rem;
+  color: #cccccc;
+  font-size: 1.1rem;
 }
 
 .book-btn {
   width: 100%;
   padding: 15px;
-  background-color: #27ae60;
+  background-color: #4CAF50;
   color: #ffffff;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .book-btn:hover {
-  background-color: #1e8449;
+  background-color: #45a049;
 }
 
 /* Forms */
-.search-form,
-.login-form {
-  background: #ffffff;
+.search-form, .login-form {
+  background: #1e1e1e;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   max-width: 500px;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 .form-group {
@@ -175,20 +176,23 @@ nav a:hover {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 2px solid #bdc3c7;
+  border: 2px solid #444444;
   border-radius: 5px;
   font-size: 16px;
+  background-color: #2c2c2c;
+  color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #2980b9;
+  border-color: #2196F3;
   outline: none;
 }
 
@@ -196,18 +200,18 @@ nav a:hover {
 .login-form button {
   width: 100%;
   padding: 12px;
-  background-color: #2980b9;
+  background-color: #2196F3;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .search-form button:hover,
 .login-form button:hover {
-  background-color: #1c5980;
+  background-color: #1976D2;
 }
 
 /* Login Container */
@@ -219,16 +223,17 @@ nav a:hover {
 .login-container h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .login-container p {
   text-align: center;
   margin-top: 20px;
+  color: #cccccc;
 }
 
 .login-container a {
-  color: #2980b9;
+  color: #2196F3;
   text-decoration: none;
 }
 
@@ -238,8 +243,8 @@ nav a:hover {
 
 /* Footer */
 footer {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
   text-align: center;
   padding: 20px;
   margin-top: 50px;
@@ -251,10 +256,11 @@ footer {
 }
 
 .result-item {
-  background: #ffffff;
+  background: #1e1e1e;
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }
 
