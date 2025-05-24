@@ -1,61 +1,70 @@
+// Enhanced JavaScript with Indian Rupee conversion
+const USD_TO_INR = 83; // Current exchange rate
 
-// Function to search for destinations
+// Currency conversion function
+function convertToINR(usdPrice) {
+    return Math.round(usdPrice * USD_TO_INR);
+}
+
+// Enhanced search function
 function searchDestination() {
-    const destination = document.getElementById('destination').value;
+    const destination = document.getElementById('destination').value.trim();
     
     if (destination === '') {
-        alert('Please enter a destination!');
+        showStylishAlert('⚠️ Please enter a destination!', 'warning');
         return;
     }
     
-    // Simple search - in real app, this would call the backend
-    alert('Searching for trips to ' + destination + '...');
+    // Popular Indian destinations
+    const indianDestinations = ['goa', 'kerala', 'rajasthan', 'himachal', 'kashmir', 'mumbai', 'delhi'];
+    const isIndianDestination = indianDestinations.some(place => 
+        destination.toLowerCase().includes(place)
+    );
     
-    // Redirect to search page (simple way)
-    window.location.href = 'search.html';
-}
-
-// Function to show place details
-function showPlaceDetails(placeName) {
-    alert('Showing details for ' + placeName + '\n\nThis feature is coming soon!');
-}
-
-// Make buttons work when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Travel Planner website loaded!');
-    
-    // Add click events to all "View Details" buttons
-    const bookButtons = document.querySelectorAll('.book-btn');
-    bookButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            const placeCard = button.closest('.place-card');
-            const placeName = placeCard.querySelector('h4').textContent;
-            showPlaceDetails(placeName);
-        });
-    });
-});
-
-// Simple function to change page title
-function updatePageTitle(newTitle) {
-    document.title = newTitle + ' - Travel Planner';
-}
-
-// Function to show welcome message
-function showWelcomeMessage() {
-    const hour = new Date().getHours();
-    let greeting;
-    
-    if (hour < 12) {
-        greeting = 'Good morning';
-    } else if (hour < 18) {
-        greeting = 'Good afternoon';
+    if (isIndianDestination) {
+        showStylishAlert(`🇮🇳 Searching for amazing ${destination} packages...`, 'success');
     } else {
-        greeting = 'Good evening';
+        showStylishAlert(`🌍 Searching for international trips to ${destination}...`, 'info');
     }
     
-    console.log(greeting + '! Welcome to Travel Planner!');
+    setTimeout(() => {
+        window.location.href = 'search.html';
+    }, 1500);
 }
 
-// Call welcome message when page loads
-showWelcomeMessage();
-
+// Enhanced notification system
+function showStylishAlert(message, type = 'info') {
+    const colors = {
+        success: '#2E8B57',
+        warning: '#FF8C00', 
+        info: '#4A90E2',
+        error: '#DC143C'
+    };
+    
+    const notification = document.createElement('div');
+    notification.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${colors[type]};
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            z-index: 1000;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            animation: slideInRight 0.5s ease;
+            max-width: 350px;
+        ">
+            ${message}
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 4000);
+}
