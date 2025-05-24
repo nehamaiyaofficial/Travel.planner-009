@@ -1,3 +1,4 @@
+/* Enhanced CSS with glassmorphism and modern aesthetics */
 * {
     margin: 0;
     padding: 0;
@@ -5,21 +6,31 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
 }
 
-/* Header */
+/* Enhanced Header with glassmorphism */
 header {
-    background-color: #2196F3;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+/* Rest of the enhanced CSS... */
 header h1 {
     font-size: 1.5rem;
 }
@@ -251,3 +262,5 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
