@@ -1,7 +1,12 @@
 :root {
     /* Indian-inspired color palette */
+<<<<<<< HEAD
     --saffron: #FF9933;
     --white: #FFFFFFFF;
+=======
+    --saffron: #FF99333;
+    --white: #FFFFFFF;
+>>>>>>> css-styling
     --green: #138808;
     --navy-blue: #000080;
     --lotus-pink: #FF69B4;
